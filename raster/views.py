@@ -12,7 +12,12 @@ from PIL import Image
 
 from django.conf import settings
 from django.contrib.gis.gdal import GDALRaster
-from django.contrib.gis.gdal.raster.const import VSI_FILESYSTEM_BASE_PATH
+
+try:
+    from django.contrib.gis.gdal.raster.const import VSI_FILESYSTEM_BASE_PATH
+except ImportError:
+    VSI_FILESYSTEM_BASE_PATH = "/vsimem"
+
 from django.contrib.gis.geos import Polygon
 from django.db.models import Max, Q
 from django.http import FileResponse, Http404, HttpResponse
