@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import datetime
+import pytz
 
 from django.db import migrations, models
 
@@ -14,13 +15,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='legend',
             name='modified',
-            field=models.DateTimeField(default=datetime.datetime(2015, 8, 19, 3, 20, 29, 439201), auto_now=True),
+            field=models.DateTimeField(default=datetime.datetime(2015, 8, 19, 3, 20, 29, 439201, tzinfo=pytz.UTC), auto_now=True),
             preserve_default=False,
         ),
         migrations.AddField(
             model_name='rasterlayer',
             name='modified',
-            field=models.DateTimeField(default=datetime.datetime(2015, 8, 19, 3, 20, 37, 663400), auto_now=True),
+            field=models.DateTimeField(default=datetime.datetime(2015, 8, 19, 3, 20, 37, 663400, tzinfo=pytz.UTC), auto_now=True),
             preserve_default=False,
         ),
     ]
