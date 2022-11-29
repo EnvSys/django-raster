@@ -1,6 +1,11 @@
 django-raster change log
 ========================
 
+0.8.2
+-----
+
+* Sort of Django 4.0 compatability.
+
 0.8
 ---
 * Django 3.0 compatability.
